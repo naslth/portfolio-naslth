@@ -1,10 +1,10 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import Logo from './Logo';
-import MobileNav from './MobileNav';
-import Nav from './Nav';
-import { ThemeToggler } from './ThemeToggler';
+import Logo from '../utils/Logo';
+import MobileNav from '../utils/MobileNav';
+import Nav from '../utils/Nav';
+import { ThemeToggler } from '../utils/ThemeToggler';
 import { useEffect, useState } from 'react';
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
   }, []);
   return (
     <header
-      className={`${header ? 'py-4 shadow-lg dark: bg-accent' : 'py-6 dark:bg-transparent'} sticky top-0 z-30 transition-all`}
+      className={`${header ? 'py-4 bg-white shadow-lg dark:bg-accent' : 'py-6 dark:bg-transparent'} sticky top-0 z-30 transition-all`}
     >
       <div className='container mx-auto'>
         <div className='flex justify-between items-center'>

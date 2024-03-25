@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import Header from '@/components/base/Header';
+import Footer from '@/components/base/Footer';
+import { ThemeProvider } from '@/components/base/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} scrollbar-thin scrollbar-thumb-neutral-400 hover:scrollbar-thumb-gray-600 active:scrollbar-thumb-slate-500 scrollbar-track-gray-200 overflow-y-scroll`}
       >
-        <ThemeProvider attribute='class' defaultTheme='dark'>
+        <ThemeProvider attribute='class' defaultTheme='light'>
           <Header />
           {children}
           <Footer />

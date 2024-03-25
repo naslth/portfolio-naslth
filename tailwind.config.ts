@@ -66,6 +66,11 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      backgroundImage: {
+        bg_divider: 'url(/bg_divider.svg)',
+        dev_bg: 'url(/dev_bg.png)',
+        dev_bg_dark: 'url(/dev_bg_dark.png)'
       }
     }
   },

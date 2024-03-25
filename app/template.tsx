@@ -24,6 +24,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         style={{ transform: `translateY(${scrollProgress - 100}%)` }}
         className='fixed z-50 bg-primary w-1 top-0 right-0 bottom-0 transition-all duration-500'
       ></span>
+      <div className='h-[4000px]'></div>
     </div>
   );
 }
