@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import { useTheme } from 'next-themes';
 import Socials from '@/components/utils/Socials';
-
+import { IoIosMan } from 'react-icons/io';
+import { AiOutlineProject } from 'react-icons/ai';
 import { IoBriefcase } from 'react-icons/io5';
 import ImgBadge from '@/components/utils/ImgBadge';
 import DevImg from '@/components/utils/DevImg';
@@ -43,7 +44,24 @@ export default function DevSection() {
               />
             </div>
             <div className='hidden xl:flex relative'>
-              <ImgBadge containerStyles='top-[20%]' icon={<IoBriefcase />} />
+              <ImgBadge
+                containerStyles='top-[20%] left-[10%]'
+                icon={<IoIosMan />}
+                endCountNum={22}
+                badgeText='Years Old'
+              />
+              <ImgBadge
+                containerStyles='top-[60%] right-[0%]'
+                icon={<IoBriefcase />}
+                endCountNum={1}
+                badgeText='Years Of Expreience'
+              />
+              <ImgBadge
+                containerStyles='bottom-[10%] left-[10%]'
+                icon={<AiOutlineProject />}
+                endCountNum={1}
+                badgeText='Projects'
+              />
               <DevImg />
             </div>
           </div>
