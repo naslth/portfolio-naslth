@@ -69,8 +69,10 @@ const config = {
       },
       backgroundImage: {
         bg_divider: 'url(/bg_divider.svg)',
-        dev_bg: 'url(/dev_bg.png)',
-        dev_bg_dark: 'url(/dev_bg_dark.png)'
+        dev_bg: 'url(/dev_bg_light.png)',
+        dev_bg_dark: 'url(/dev_bg_dark.png)',
+        contact_dark: 'url(/contact_dark.svg)',
+        contact_light: 'url(/contact_light.svg)'
       }
     }
   },
