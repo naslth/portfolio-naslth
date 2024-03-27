@@ -1,7 +1,17 @@
 import DevImg from '@/components/utils/DevImg';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Calendar, User2, Home, PhoneCall, Mail, GraduationCap, Briefcase } from 'lucide-react';
-import React from 'react';
+import REACT from '@/public/react.svg';
+import TAILWIND from '@/public/tailwind.svg';
+import NEXT from '@/public/next.png';
+import SPRING from '@/public/spring.svg';
+import POSTGRES from '@/public/postgres.svg';
+import GIT from '@/public/git.svg';
+import DOCKER from '@/public/docker.svg';
+import NODE from '@/public/node.svg';
+import AWS from '@/public/aws.svg';
+import LINUX from '@/public/linux.svg';
+import Image from 'next/image';
 const personalData = [
   {
     icon: <User2 size={20} />,
@@ -58,6 +68,25 @@ const qualificationData = [
     icon: <Briefcase size={26} />
   }
 ];
+
+const skillData = [
+  {
+    title: 'Front-end',
+    data: [REACT, NEXT, TAILWIND]
+  },
+  {
+    title: 'Back-end',
+    data: [NODE, SPRING]
+  },
+  {
+    title: 'Database',
+    data: [POSTGRES]
+  },
+  {
+    title: 'Others',
+    data: [GIT, DOCKER, AWS, LINUX]
+  }
+];
 export default function AboutSection() {
   return (
     <section className='xl:h-[860px] pb-12 xl:py-24 mt-10'>
@@ -108,7 +137,7 @@ export default function AboutSection() {
                   <div>
                     <h3 className='h3 mb-8 text-center'>My journey</h3>
                     {/* wrapper */}
-                    <div className='grid md:grid-cols-2 gap-y-8'>
+                    <div className='grid md:grid-cols-2 gap-y-8 gap-x-4'>
                       {qualificationData.map((category, index) => {
                         return (
                           <div key={index} className='flex flex-col gap-y-6'>
@@ -145,7 +174,32 @@ export default function AboutSection() {
                   </div>
                 </TabsContent>
                 {/* skills */}
-                <TabsContent value='skills'>skills</TabsContent>
+                <TabsContent value='skills'>
+                  <div className='flex flex-col mx-auto lg:mx-0 gap-y-8 max-w-[520px] mt-10'>
+                    {skillData.map((category, index) => {
+                      return (
+                        <div key={index} className='grid md:grid-cols-2 gap-y-8'>
+                          <div className='flex flex-row gap-x-8 mx-auto lg:mx-0 items-center justify-between lg:pr-16'>
+                            <h4 className='capitalize h4 text-primary text-center mx-auto'>{category.title}</h4>
+                            <span className='hidden lg:flex w-[2px] h-7 lg:h-10 bg-primary'></span>
+                          </div>
+                          <div className='flex flex-row gap-x-8 mx-auto lg:mx-0 items-center'>
+                            {category.data.map((item, index) => {
+                              return (
+                                <Image
+                                  key={index}
+                                  src={item}
+                                  alt='skill'
+                                  className={`w-8 h-8 lg:w-10 lg:h-10 ${item === NEXT ? 'border border-white rounded-full' : 'bg-none'}`}
+                                />
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </TabsContent>
               </div>
             </Tabs>
           </div>

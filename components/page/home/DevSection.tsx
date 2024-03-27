@@ -12,6 +12,13 @@ import { IoBriefcase } from 'react-icons/io5';
 import ImgBadge from '@/components/utils/ImgBadge';
 import DevImg from '@/components/utils/DevImg';
 import { TypeAnimation } from 'react-type-animation';
+import React from '@/public/react.svg';
+import HTML from '@/public/html.svg';
+import CSS from '@/public/css.svg';
+import JS from '@/public/js.svg';
+import TS from '@/public/ts.svg';
+import JAVA from '@/public/java.svg';
+import Image from 'next/image';
 export default function DevSection() {
   const { theme } = useTheme();
   return (
@@ -20,13 +27,13 @@ export default function DevSection() {
         <div className='container mx-auto'>
           <div className='flex justify-between gap-8'>
             <div className='flex max-w[400px] flex-col justify-center mx-auto lg:mx-0 text-center lg:text-left'>
-              <div className='flex items-center gap-x-4 text-primary text-lg mb-4'>
+              <div className='flex items-center gap-x-4 text-primary text-lg mb-4 mx-auto lg:mx-0'>
                 <span className='w-[30px] h-[2px] bg-primary'></span>
                 <div className='text-sm uppercase font-semibold text-primary tracking-[4px]'>Web Developer</div>
                 <span className='w-[30px] h-[2px] bg-primary'></span>
               </div>
               <h1 className='h1'>👋 Hello, I&apos;m </h1>
-              <div className='h-10 mb-14 xl:mb-20'>
+              <div className='h-10 mb-16 xl:mb-20'>
                 <TypeAnimation
                   sequence={[
                     'Hieu',
@@ -44,7 +51,16 @@ export default function DevSection() {
                   className='h1'
                 />
               </div>
-              {/* add tech stack */}
+
+              <div className='flex flex-row gap-x-8 mb-4 mx-auto lg:mx-0 items-center'>
+                <h1 className='h3'> Tech stack </h1>
+                <span className='w-[2px] h-full bg-primary'></span>
+                <Image src={HTML} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
+                <Image src={CSS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
+                <Image src={JS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
+                <Image src={TS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
+                <Image src={JAVA} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
+              </div>
               <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto lg:mx-0 mt-4 mb-12'>
                 <Link href='/contact'>
                   <Button className='hover:text-foreground dark:hover:text-secondary gap-x-2'>
