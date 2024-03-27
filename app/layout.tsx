@@ -1,25 +1,32 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Outfit } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/base/Header';
+import Footer from '@/components/base/Footer';
+import { ThemeProvider } from '@/components/base/ThemeProvider';
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "S1mple Portfolio",
-  description: "Naslth's portfolio",
+  title: "Naslth's Portfolio",
+  description: "Naslth's portfolio"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="bg-gradient-to-r from-[#434343] to-[#000000]">
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={`${outfit.className} scrollbar-thin scrollbar-thumb-neutral-400 hover:scrollbar-thumb-gray-600 active:scrollbar-thumb-slate-500 scrollbar-track-gray-200 overflow-y-scroll`}
+      >
+        <ThemeProvider attribute='class' defaultTheme='light'>
+          <Header />
           {children}
-        </div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

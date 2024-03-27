@@ -1,11 +1,12 @@
-import DevSection from "@/components/DevSection";
-
-export default function Home() {
+import AboutSection from '@/components/page/home/AboutSection';
+import DevSection from '@/components/page/home/DevSection';
+import ContactSection from '@/components/page/home/ContactSection';
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col">
-    <div className="container mt-24 mx-auto px-12 py-4">
+    <div>
       <DevSection />
+      <AboutSection />
+      <ContactSection />
     </div>
-  </main>
   );
 }
