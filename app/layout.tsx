@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/base/Header';
 import Footer from '@/components/base/Footer';
 import { ThemeProvider } from '@/components/base/ThemeProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Naslth's Portfolio",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${inter.className} scrollbar-thin scrollbar-thumb-neutral-400 hover:scrollbar-thumb-gray-600 active:scrollbar-thumb-slate-500 scrollbar-track-gray-200 overflow-y-scroll`}
+        className={`${outfit.className} scrollbar-thin scrollbar-thumb-neutral-400 hover:scrollbar-thumb-gray-600 active:scrollbar-thumb-slate-500 scrollbar-track-gray-200 overflow-y-scroll`}
       >
         <ThemeProvider attribute='class' defaultTheme='light'>
           <Header />

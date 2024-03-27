@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
+import { FolderGit2 } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Contact } from 'lucide-react';
 const links = [
-  { path: '/', name: 'home' },
-  { path: '/projects', name: 'projects' },
-  { path: '/contact', name: 'contact' }
+  { path: '/', name: 'home', icon: <Home className='text-primary'/> },
+  { path: '/projects', name: 'projects', icon: <FolderGit2 className='text-primary'/> },
+  { path: '/contact', name: 'contact', icon: <Contact className='text-primary'/> }
 ];
 type NavProps = {
   containerStyles?: string;
@@ -18,20 +20,23 @@ export default function Nav({ containerStyles, linkStyles, underlineStyles }: Na
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => {
         return (
-          <Link href={link.path} key={index} className={`capitalize ${linkStyles}`}>
-            {link.path === path ? (
-              <motion.span
-                initial={{ y: '-100%' }}
-                animate={{ y: 0 }}
-                transition={{ type: 'tween' }}
-                layoutId='underline'
-                className={`${underlineStyles}`}
-              ></motion.span>
-            ) : (
-              <></>
-            )}
-            {link.name}
-          </Link>
+          <div className=' flex gap-x-2' key={index}>
+            <Link href={link.path} className={`capitalize ${linkStyles}`}>
+              {link.path === path ? (
+                <motion.span
+                  initial={{ y: '-100%' }}
+                  animate={{ y: 0 }}
+                  transition={{ type: 'tween' }}
+                  layoutId='underline'
+                  className={`${underlineStyles}`}
+                ></motion.span>
+              ) : (
+                <></>
+              )}
+              {link.name}
+            </Link>
+            {link.icon}
+          </div>
         );
       })}
     </nav>

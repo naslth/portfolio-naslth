@@ -26,14 +26,14 @@ export default function Header() {
           <Logo />
           <div className='flex items-center gap-x-6'>
             <Nav
-              containerStyles='hidden xl:flex gap-x-8 items-center'
+              containerStyles='hidden lg:flex gap-x-8 items-center'
               linkStyles='relative hover:text-primary transition-all'
               underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full'
             />
-            <div className='xl:hidden'>
+            <ThemeToggler />
+            <div className='lg:hidden'>
               <MobileNav />
             </div>
-            <ThemeToggler />
           </div>
         </div>
       </div>

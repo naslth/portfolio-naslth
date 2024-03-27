@@ -1,9 +1,11 @@
+import AboutSection from '@/components/page/home/AboutSection';
 import DevSection from '@/components/page/home/DevSection';
 
 export default function HomePage() {
   return (
-    <main>
+    <div>
       <DevSection />
-    </main>
+      <AboutSection />
+    </div>
   );
 }

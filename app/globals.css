@@ -53,19 +53,37 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 .h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] font-bold tracking-[2px];
+  @apply text-3xl lg:text-4xl xl:text-5xl xl:leading-[50px] font-bold tracking-[2px];
 }
 
+.h2 {
+  @apply text-3xl xl:text-4xl font-bold;
+}
+
+.h3 {
+  @apply text-2xl xl:text-3xl font-bold;
+}
+
+.h4 {
+  @apply text-xl xl:text-2xl font-semibold;
+}
+
+
 .sub {
-  @apply text-muted-foreground text-lg mb-8 font-light;
+  @apply text-muted-foreground lg:text-lg text-base mb-8 font-light;
 }
 
 .badge {
-  @apply absolute z-10 w-[200px] bg-white dark:backdrop-blur-[44px] shadow-2xl h-[68px] p-4 rounded-[10px] flex items-center gap-x-4;
+  @apply absolute z-10 w-[200px] bg-white dark:backdrop-blur-[44px] shadow-2xl xl:h-[60px] h-[40px] p-4 rounded-[10px] flex items-center gap-x-4;
+}
+
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-3
 }
