@@ -21,7 +21,7 @@ const personalData = [
   },
   {
     icon: <GraduationCap size={20} />,
-    text: 'Senior student majoring in Computer Networking & Data Communication'
+    text: 'Senior student majoring in Computer Networks and Data Communications'
   },
   {
     icon: <Home size={20} />,
@@ -40,7 +40,7 @@ const qualificationData = [
       },
       {
         location: 'University of Engineering and Technology - Vietnam National University',
-        qualification: 'Major: Computer Networking and Data Communication',
+        qualification: 'Major: Computer Networks and Data Communications',
         years: '2020 - Present'
       }
     ],
@@ -81,6 +81,7 @@ export default function AboutSection() {
                 </TabsTrigger>
               </TabsList>
               <div className='text-lg mt-12 xl:mt-8'>
+                {/* personal */}
                 <TabsContent value='personal'>
                   <div className='text-center lg:text-left'>
                     <h3 className='h3 mb-4'>
@@ -102,6 +103,7 @@ export default function AboutSection() {
                     </div>
                   </div>
                 </TabsContent>
+                {/* qualifications */}
                 <TabsContent value='qualifications'>
                   <div>
                     <h3 className='h3 mb-8 text-center'>My journey</h3>
@@ -124,7 +126,7 @@ export default function AboutSection() {
                                       <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500'></div>
                                     </div>
                                     <div>
-                                      <div className='font-semibold xl:text-xl text-lg leading-none mb-2'>
+                                      <div className='font-semibold xl:text-xl leading-snug text-lg mb-2'>
                                         {item.location}
                                       </div>
                                       <div className='xl:text-lg text-base leading-snug text-muted-foreground mb-4'>
@@ -142,6 +144,7 @@ export default function AboutSection() {
                     </div>
                   </div>
                 </TabsContent>
+                {/* skills */}
                 <TabsContent value='skills'>skills</TabsContent>
               </div>
             </Tabs>
