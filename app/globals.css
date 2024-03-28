@@ -86,3 +86,8 @@
 .section-title {
   @apply text-4xl font-bold relative w-max flex items-center justify-between gap-3 before:bg-dot_dark before:dark:bg-dot_light before:w-[25px] before:h-[25px] before:bg-cover before:bg-center before:bg-no-repeat;
 }
+
+.swiper-hozizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply bg-primary;
+}
