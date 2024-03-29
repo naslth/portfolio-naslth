@@ -17,7 +17,7 @@ export type Project = {
   source: string;
 };
 
-const projectData: Project[] = [
+export const projectData: Project[] = [
   {
     img: '/work1.jpg',
     category: 'web',
@@ -58,6 +58,7 @@ export default function WorkSection() {
       <div className='container mx-auto'>
         <div className='max-w-[300px] mx-auto lg:mx-0 lg:text-left mb-12 lg:h-[400px] flex flex-col justify-center text-center lg:items-start'>
           <h2 className='section-title mb-8 text-center mx-auto'>Mini projects</h2>
+          <p className='text-muted-foreground text-lg mb-8 mx-auto'>Check all my project below 👇</p>
           <Link href='/projects' className='mx-auto'>
             <Button>All projects</Button>
           </Link>
