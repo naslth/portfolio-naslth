@@ -22,7 +22,7 @@ export default function ContactPage() {
         </div>
         <div className='grid lg:grid-cols-2 mb-24 xl:mb-32'>
           <div className='flex flex-col gap-y-4 lg:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg'>
-          <div className='text-sm uppercase font-semibold text-primary tracking-[4px]'>Personal Infomation</div>
+            <div className='text-sm uppercase font-semibold text-primary tracking-[4px]'>Personal Infomation</div>
             <div className='flex items-center gap-x-8'>
               <Mail size={20} className='text-primary' />
               <a href='mailto:letrunghieu10x@gmail.com?subject=Me&body=Hello!'>letrunghieu10x@gmail.com</a>
