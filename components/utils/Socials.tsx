@@ -3,11 +3,11 @@ import Link from 'next/link';
 import React from 'react';
 import { RiLinkedinFill, RiGithubFill, RiFacebookBoxFill, RiInstagramFill, RiTelegramFill } from 'react-icons/ri';
 const icons = [
-  { path: '/', name: <RiGithubFill /> },
-  { path: '/', name: <RiLinkedinFill /> },
-  { path: '/', name: <RiFacebookBoxFill /> },
-  { path: '/', name: <RiInstagramFill /> },
-  { path: '/', name: <RiTelegramFill /> }
+  { path: 'https://github.com/naslth', name: <RiGithubFill /> },
+  { path: 'https://www.linkedin.com/in/naslth/', name: <RiLinkedinFill /> },
+  { path: 'https://www.facebook.com/le.trung.hieu.21/', name: <RiFacebookBoxFill /> },
+  { path: 'https://www.instagram.com/le.trung.hieu21/', name: <RiInstagramFill /> },
+  { path: 'https://t.me/naslth', name: <RiTelegramFill /> }
 ];
 
 type SocialProps = {

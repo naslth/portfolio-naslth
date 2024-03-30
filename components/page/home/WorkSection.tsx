@@ -19,36 +19,36 @@ export type Project = {
 
 export const projectData: Project[] = [
   {
-    img: '/work1.jpg',
+    img: '/pm.png',
     category: 'web',
     name: 'PM',
-    description: '',
+    description: 'Project management web application with realtime chatbox and notification system.',
     link: '',
-    source: ''
+    source: 'https://github.com/naslth/pm'
   },
   {
-    img: '/work1.jpg',
+    img: '/xmpp.png',
     category: 'web',
-    name: 'PM',
-    description: '',
+    name: 'XMPP-sensor',
+    description: 'A system that emulates sensors communicating with each other using the XMPP protocol',
     link: '',
-    source: ''
+    source: 'https://github.com/naslth/XMPP-sensor'
   },
   {
-    img: '/work1.jpg',
-    category: 'web',
-    name: 'PM',
-    description: '',
+    img: '/bomb.png',
+    category: 'app',
+    name: 'Bomberman',
+    description: 'A legendary game clone with Java app',
     link: '',
-    source: ''
+    source: 'https://github.com/naslth/bomb'
   },
   {
-    img: '/work1.jpg',
-    category: 'web',
-    name: 'PM',
-    description: '',
+    img: '/dict.png',
+    category: 'app',
+    name: 'Dictionary',
+    description: 'Multiple translator JavaFX application with bookmark and personal edit word',
     link: '',
-    source: ''
+    source: 'https://github.com/naslth/dictionary-java'
   }
 ];
 
@@ -65,7 +65,7 @@ export default function WorkSection() {
         </div>
         <div className='xl:max-w-[900px] lg:max-w-[700px] lg:absolute right-0 top-0 '>
           <Swiper
-            className='h-[480px]'
+            className='h-[550px]'
             slidesPerView={1}
             breakpoints={{
               640: {
@@ -79,7 +79,9 @@ export default function WorkSection() {
             {projectData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <ProjectCard project={project} />
+                  <div className='h-[90%]'>
+                    <ProjectCard project={project} />
+                  </div>
                 </SwiperSlide>
               );
             })}
