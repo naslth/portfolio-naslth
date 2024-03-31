@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             {project.link !== '' ? (
               <Link
                 href={project.link}
-                className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300'
+                className='bg-white dark:bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300'
               >
                 <Link2Icon />
               </Link>
@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             )}
             <Link
               href={project.source}
-              className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300'
+              className='bg-white dark:bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300'
             >
               <GitHubLogoIcon />
             </Link>
@@ -37,6 +37,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <Badge className='uppercase text-sm font-medium mb-2 absolute top-4 left-5'>{project.category}</Badge>
         <h4 className='h4 mb-1'>{project.name}</h4>
         <p className='text-muted-foreground text-lg'>{project.description}</p>
+        <p className='text-muted-foreground text-lg'><span className='text-primary'>Tech stack: </span>{project.tech_stack}</p>
       </div>
     </Card>
   );
