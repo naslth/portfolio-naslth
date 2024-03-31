@@ -19,6 +19,7 @@ import JS from '@/public/js.svg';
 import TS from '@/public/ts.svg';
 import JAVA from '@/public/java.svg';
 import Image from 'next/image';
+import Dev from '@/public/dev.png';
 export default function DevSection() {
   const { theme } = useTheme();
   return (
@@ -98,7 +99,7 @@ export default function DevSection() {
                 badgeText='Projects'
                 endCountText='+'
               />
-              <DevImg />
+              <DevImg ImgSrc={Dev} />
             </div>
           </div>
           <div className='hidden md:flex absolute left-2/4 bottom-24 animate-bounce '>
