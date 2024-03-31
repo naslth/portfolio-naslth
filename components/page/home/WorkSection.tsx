@@ -13,6 +13,7 @@ export type Project = {
   category: string;
   name: string;
   description: string;
+  tech_stack: string;
   link: string;
   source: string;
 };
@@ -23,6 +24,7 @@ export const projectData: Project[] = [
     category: 'web',
     name: 'PM',
     description: 'Project management web application with realtime chatbox and notification system.',
+    tech_stack: 'React, Express.js, PostgreSQL, Socket.io',
     link: '',
     source: 'https://github.com/naslth/pm'
   },
@@ -30,7 +32,8 @@ export const projectData: Project[] = [
     img: '/xmpp.png',
     category: 'web',
     name: 'XMPP-sensor',
-    description: 'A system that emulates sensors communicating with each other using the XMPP protocol',
+    description: 'Emulates sensors communicaton and display weather chart data.',
+    tech_stack: 'Java Spring Boot, React, XMPP, Openfire',
     link: '',
     source: 'https://github.com/naslth/XMPP-sensor'
   },
@@ -38,7 +41,8 @@ export const projectData: Project[] = [
     img: '/bomb.png',
     category: 'app',
     name: 'Bomberman',
-    description: 'A legendary game clone with Java app',
+    description: 'A legendary game clone with Java.',
+    tech_stack: 'Java, Libgdx',
     link: '',
     source: 'https://github.com/naslth/bomb'
   },
@@ -46,7 +50,8 @@ export const projectData: Project[] = [
     img: '/dict.png',
     category: 'app',
     name: 'Dictionary',
-    description: 'Multiple translator JavaFX application with bookmark and personal edit word',
+    description: 'Multiple translator JavaFX application with bookmark and personal edit word.',
+    tech_stack: 'Java, JavaFX, SQLite',
     link: '',
     source: 'https://github.com/naslth/dictionary-java'
   }

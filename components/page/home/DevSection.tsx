@@ -20,6 +20,7 @@ import TS from '@/public/ts.svg';
 import JAVA from '@/public/java.svg';
 import Image from 'next/image';
 import Dev from '@/public/dev.png';
+import { projectData } from './WorkSection';
 export default function DevSection() {
   const { theme } = useTheme();
   return (
@@ -95,8 +96,8 @@ export default function DevSection() {
               <ImgBadge
                 containerStyles='bottom-[10%] left-[5%]'
                 icon={<AiOutlineProject />}
-                endCountNum={1}
-                badgeText='Projects'
+                endCountNum={projectData.length}
+                badgeText='Mini Projects'
                 endCountText='+'
               />
               <DevImg ImgSrc={Dev} />
