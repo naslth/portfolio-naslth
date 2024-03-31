@@ -16,7 +16,7 @@ export default function ProjectPage() {
       <div className='container mx-auto'>
         <h2 className='section-title mb-8 lg:mb-16 text-center mx-auto'>My mini projects</h2>
         <Tabs defaultValue={category} className='mb-24 xl:mb-36'>
-          <TabsList className='w-full grid md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto lg:border dark:border-none'>
+          <TabsList className='w-full grid md:grid-cols-3 lg:max-w-[640px] mb-12 mx-auto lg:border dark:border-none'>
             {categories.map((category, index) => {
               return (
                 <TabsTrigger
@@ -30,7 +30,7 @@ export default function ProjectPage() {
               );
             })}
           </TabsList>
-          <div className='text-lg xl:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          <div className='text-lg xl:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 h-full'>
             {filterProjects.map((project, index) => {
               return (
                 <TabsContent key={index} value={category}>
