@@ -32,12 +32,11 @@ export const projectData: Project[] = [
     img: '/xmpp.png',
     category: 'web',
     name: 'XMPP-sensor',
-    description:
-      'Emulates sensors communicaton and display weather chart data.',
+    description: 'Emulates sensors communicaton and display weather chart data.',
     tech_stack: 'Java Spring Boot, React, XMPP, Openfire',
     link: '',
     source: 'https://github.com/naslth/XMPP-sensor'
-  },  
+  },
   {
     img: '/bomb.png',
     category: 'app',
