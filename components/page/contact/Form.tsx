@@ -7,6 +7,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { z, ZodType } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useToast } from '@/components/ui/use-toast';
 type FormData = {
   name: string;
   email: string;
@@ -14,6 +15,7 @@ type FormData = {
 };
 
 export default function Form() {
+  const { toast } = useToast();
   const schema: ZodType<FormData> = z.object({
     name: z.string().min(1, { message: 'Name is required' }),
     email: z.string().email('Invalid email address'),
@@ -28,6 +30,22 @@ export default function Form() {
   });
   const submit = (data: FormData) => {
     console.log(data);
+    let token = '6808178924:AAHAxSOTGEru9bHDWNSRnLi3zlcgiQihrwg';
+    let chat_id = '-4171607824';
+    let text = `🔊🔊 New contact\n%0A
+    Name: ${data.name}\n%0A
+    Email: ${data.email}\n%0A
+    Content: ${data.content}\n%0A
+    Time: ${new Date().toLocaleString()}`;
+    let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${text}`;
+    console.log(text);
+    let api = new XMLHttpRequest();
+    api.open('GET', url, true);
+    api.send();
+    toast({
+      title: 'Message sent! 🚀',
+      description: 'I will get back to you soon! 🙌'
+    });
   };
   return (
     <form className='flex flex-col gap-y-4' onSubmit={handleSubmit(submit)}>
