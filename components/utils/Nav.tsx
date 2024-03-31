@@ -5,9 +5,9 @@ import { FolderGit2 } from 'lucide-react';
 import { Home } from 'lucide-react';
 import { Contact } from 'lucide-react';
 const links = [
-  { path: '/', name: 'home', icon: <Home className='text-primary'/> },
-  { path: '/projects', name: 'projects', icon: <FolderGit2 className='text-primary'/> },
-  { path: '/contact', name: 'contact', icon: <Contact className='text-primary'/> }
+  { path: '/', name: 'home', icon: <Home className='text-primary' /> },
+  { path: '/projects', name: 'projects', icon: <FolderGit2 className='text-primary' /> },
+  { path: '/contact', name: 'contact', icon: <Contact className='text-primary' /> }
 ];
 type NavProps = {
   containerStyles?: string;
