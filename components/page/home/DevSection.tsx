@@ -22,7 +22,6 @@ import Image from 'next/image';
 import Dev from '@/public/dev.png';
 import { projectData } from './WorkSection';
 export default function DevSection() {
-  const { theme } = useTheme();
   return (
     <section className={'h-[84vh] lg:pt-8 pt-4'}>
       <div className='relative w-full h-full py-4 sm:py-12 lg:py-24 bg-gradient-to-r from-[#ddd6f3] to-[#faaca8] bg dark:bg-none bg-no-repeat'>
@@ -69,11 +68,11 @@ export default function DevSection() {
                     Contact me <BsSend size={18} />
                   </Button>
                 </Link>
-                <Link href=''>
+                <a href='/Software_Engineer_Resume.pdf' download='LeTrungHieu_Software_Engineer_Resume'>
                   <Button variant={'secondary'} className='hover:text-primary gap-x-2'>
                     View my CV <HiOutlineDownload size={18} />
                   </Button>
-                </Link>
+                </a>
               </div>
               <Socials
                 containerStyles='flex gap-x-6 mx-auto lg:mx-0'
