@@ -22,13 +22,12 @@ import Image from 'next/image';
 import Dev from '@/public/dev.png';
 import { projectData } from './WorkSection';
 export default function DevSection() {
-  const { theme } = useTheme();
   return (
-    <section className={'h-[84vh] lg:pt-8 pt-4'}>
+    <section className={'h-[600px] sm:h-[84vh] lg:pt-8 pt-4'}>
       <div className='relative w-full h-full py-4 sm:py-12 lg:py-24 bg-gradient-to-r from-[#ddd6f3] to-[#faaca8] bg dark:bg-none bg-no-repeat'>
         <div className='container mx-auto'>
           <div className='flex justify-between gap-8'>
-            <div className='flex max-w[400px] flex-col justify-center mx-auto lg:mx-0 text-center lg:text-left'>
+            <div className='flex max-w[400px] flex-col justify-center mx-auto lg:mx-0 text-center lg:text-left gap-y-3.5'>
               <div className='flex items-center gap-x-4 text-primary text-lg mb-4 mx-auto lg:mx-0'>
                 <span className='w-[30px] h-[2px] bg-primary'></span>
                 <div className='text-sm uppercase font-semibold text-primary tracking-[4px]'>Web Developer</div>
@@ -54,8 +53,8 @@ export default function DevSection() {
                 />
               </div>
 
-              <div className='flex flex-row gap-x-8 mb-4 mx-auto lg:mx-0 items-center'>
-                <h1 className='h3'> Tech stack </h1>
+              <div className='flex flex-row gap-x-2 sm:gap-x-6 lg:gap-x-8 mb-4 mx-auto lg:mx-0 items-center'>
+                <h1 className='h4'> Tech stack </h1>
                 <span className='w-[2px] h-full bg-primary'></span>
                 <Image src={HTML} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
                 <Image src={CSS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
@@ -69,11 +68,11 @@ export default function DevSection() {
                     Contact me <BsSend size={18} />
                   </Button>
                 </Link>
-                <Link href=''>
+                <a href='/Software_Engineer_Resume.pdf' download='LeTrungHieu_Software_Engineer_Resume'>
                   <Button variant={'secondary'} className='hover:text-primary gap-x-2'>
                     View my CV <HiOutlineDownload size={18} />
                   </Button>
-                </Link>
+                </a>
               </div>
               <Socials
                 containerStyles='flex gap-x-6 mx-auto lg:mx-0'

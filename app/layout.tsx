@@ -4,7 +4,7 @@ import './globals.css';
 import Header from '@/components/base/Header';
 import Footer from '@/components/base/Footer';
 import { ThemeProvider } from '@/components/base/ThemeProvider';
-
+import { Analytics } from '@vercel/analytics/react';
 const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -27,6 +27,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
