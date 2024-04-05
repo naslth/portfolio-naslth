@@ -1,6 +1,6 @@
 import Form from '@/components/page/contact/Form';
 import { Toaster } from '@/components/ui/toaster';
-import { Mail, Home, PhoneCall } from 'lucide-react';
+import { Home, Mail, PhoneCall } from 'lucide-react';
 
 export default function ContactPage() {
   return (

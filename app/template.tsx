@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import useScrollProgress from '@/hooks/useScrollProgress';
+import { motion } from 'framer-motion';
 
 const variants = {
   hidden: { opacity: 0 },

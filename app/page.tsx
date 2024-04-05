@@ -1,6 +1,6 @@
 import AboutSection from '@/components/page/home/AboutSection';
-import DevSection from '@/components/page/home/DevSection';
 import ContactSection from '@/components/page/home/ContactSection';
+import DevSection from '@/components/page/home/DevSection';
 import WorkSection from '@/components/page/home/WorkSection';
 export default function HomePage() {
   return (
