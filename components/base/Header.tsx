@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 
 export default function Header() {
   const [header, setHeader] = useState(false);
-  const pathname = usePathname();
   useEffect(() => {
     const scrollYPos = () => {
       window.scrollY > 0 ? setHeader(true) : setHeader(false);

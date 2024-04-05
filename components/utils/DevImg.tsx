@@ -7,9 +7,9 @@ export default function DevImg({ ImgSrc }: { ImgSrc: StaticImageData }) {
         <Image
           src={ImgSrc}
           alt='Nas'
-          layout='fill'
-          objectFit='cover'
-          objectPosition='70% 30%'
+          fill
+          sizes='(min-width: 640px) 250px, 100vw'
+          style={{ objectFit: 'cover', objectPosition: '70% 30%' }}
           className='rounded-full'
         />
       </div>

@@ -6,7 +6,6 @@ import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
 export function ThemeToggler() {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
   return (
     <div>
       <Button variant={'outline'} size={'icon'} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>

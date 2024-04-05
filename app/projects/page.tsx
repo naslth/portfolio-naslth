@@ -1,8 +1,8 @@
 'use client';
 import { projectData } from '@/components/page/home/WorkSection';
-import { useState } from 'react';
-import { Tabs, TabsTrigger, TabsList, TabsContent } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ProjectCard from '@/components/utils/ProjectCard';
+import { useState } from 'react';
 
 export default function ProjectPage() {
   const uniqueCategories = ['all projects', ...new Set(projectData.map((project) => project.category))];

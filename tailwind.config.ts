@@ -69,15 +69,12 @@ const config = {
       },
       backgroundImage: {
         bg_divider: 'url(/bg_divider.svg)',
-        dev_bg: 'url(/dev_bg_light.png)',
-        dev_bg_dark: 'url(/dev_bg_dark.png)',
+        dev_bg: 'url(/dev_bg_light.svg)',
+        dev_bg_dark: 'url(/dev_bg_dark.svg)',
         contact_dark: 'url(/contact_dark.svg)',
         contact_light: 'url(/contact_light.svg)',
         dot_light: 'url(/dot_light.png)',
-        dot_dark: 'url(/dot_dark.png)',
-        title_bg_black: 'url(/title_bg_black.png)',
-        title_bg_white: 'url(/title_bg_white.png)',
-        title_bg_primary: 'url(/title_bg_primary.png)'
+        dot_dark: 'url(/dot_dark.png)'
       }
     }
   },

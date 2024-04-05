@@ -5,14 +5,16 @@ import Image from 'next/image';
 import { Card, CardHeader } from '@/components/ui/card';
 import { Link2Icon } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '../ui/button';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className='group overflow-hidden relative shadow-sm h-full'>
       <CardHeader className='p-0'>
         <div className='relative w-full h-[300px] flex items-center justify-center bg-[linear-gradient(_to_right,_#ECE9E6,#FFFFFF_)] dark:bg-[linear-gradient(_to_right,_#232526,#414345_)] bg-tertiary dark:bg-secondary/40 lg:bg-[110%] lg:bg-no-repeat overflow-hidden'>
-          <Image className='absolute bottom-0 shadow-2xl' src={project.img} width={250} height={250} alt='' priority />
+          <div className='absolute bottom-0 w-[250px] h-[250px]'>
+            <Image className='' src={project.img} fill style={{ objectFit: 'contain' }} sizes='100%' alt='' priority />
+          </div>
+
           <div className='flex gap-x-5'>
             {project.link !== '' ? (
               <Link
