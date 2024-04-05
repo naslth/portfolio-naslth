@@ -22,10 +22,10 @@ import { projectData } from './WorkSection';
 export default function DevSection() {
   return (
     <section className='relative h-[600px] sm:h-[84vh] lg:pt-8 pt-4'>
-      <div className='absolute w-full h-full py-4 sm:py-12 lg:py-24 bg-gradient-to-r from-[#ddd6f3] to-[#faaca8] bg dark:bg-none bg-no-repeat z-[-2]'>
+      <div className='absolute w-full h-full  bg-gradient-to-r from-[#ddd6f3] to-[#faaca8] bg dark:bg-none bg-no-repeat z-[-2]'>
         <div className='dark:bg-none bg-bg_divider absolute bottom-[-1px] w-full lg:h-[150px] md:h-[120px] sm:h-[80px] h-[30px] bg-cover bg-center bg-no-repeat'></div>
       </div>
-      <div className='container mx-auto z-10 trans'>
+      <div className='container py-4 sm:py-12 lg:py-24 mx-auto z-10 trans  w-full h-full'>
         <div className='flex justify-between gap-8'>
           <div className='flex max-w[400px] flex-col justify-center mx-auto lg:mx-0 text-center lg:text-left gap-y-3.5'>
             <div className='flex items-center gap-x-4 text-primary text-lg mb-4 mx-auto lg:mx-0'>
