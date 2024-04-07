@@ -26,7 +26,7 @@ export default function ParticlesComponent() {
           value: ''
         }
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         detect_on: 'window',
         events: {
@@ -91,8 +91,7 @@ export default function ParticlesComponent() {
         size: {
           value: { min: 1, max: 5 }
         }
-      },
-      detectRetina: true
+      }
     }),
     []
   );

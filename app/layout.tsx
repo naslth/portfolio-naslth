@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${outfit.className} relative scrollbar-thin scrollbar-thumb-neutral-400 hover:scrollbar-thumb-gray-600 active:scrollbar-thumb-slate-500 scrollbar-track-gray-200 overflow-y-scroll`}
       >
-        <ThemeProvider attribute='class' defaultTheme='light'>
+        <ThemeProvider attribute='class' defaultTheme='dark'>
           <ParticlesComponent />
           <Header />
           {children}
