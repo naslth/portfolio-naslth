@@ -54,6 +54,15 @@ export const projectData: Project[] = [
     tech_stack: 'Java, JavaFX, SQLite',
     link: '',
     source: 'https://github.com/naslth/dictionary-java'
+  },
+  {
+    img: '/k8s-istio.png',
+    category: 'app',
+    name: 'K8s-Istio-Demo',
+    description: 'Manage microservices with Kubernetes and Istio.',
+    tech_stack: 'Golang, Kubernetes, Istio',
+    link: '',
+    source: 'https://github.com/naslth/istio-k8s-demo'
   }
 ];
 
@@ -81,7 +90,7 @@ export default function WorkSection() {
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
-            {projectData.slice(0, 4).map((project, index) => {
+            {projectData.map((project, index) => {
               return (
                 <SwiperSlide key={index}>
                   <div className='h-[90%]'>

@@ -11,6 +11,10 @@ import DOCKER from '@/public/docker.svg';
 import NODE from '@/public/node.svg';
 import AWS from '@/public/aws.svg';
 import LINUX from '@/public/linux.svg';
+import GO from '@/public/go.svg';
+import MYSQL from '@/public/mysql.svg';
+import MONGODB from '@/public/mongodb.svg';
+import KUBERNETES from '@/public/kubernetes.svg';
 import Image from 'next/image';
 import Author from '@/public/author.jpg';
 const personalData = [
@@ -24,7 +28,7 @@ const personalData = [
   },
   {
     icon: <Mail size={20} />,
-    text: 'letrunghieu10x@gmail.com'
+    text: 'hieu.lt21.work@gmail.com'
   },
   {
     icon: <Calendar size={20} />,
@@ -32,11 +36,11 @@ const personalData = [
   },
   {
     icon: <GraduationCap size={20} />,
-    text: 'Senior student majoring in Computer Networks and Data Communications'
+    text: 'Majoring in Computer Networks and Data Communications'
   },
   {
     icon: <Home size={20} />,
-    text: 'My Dinh 2, Nam Tu Liem, Ha Noi'
+    text: 'Ha Noi'
   }
 ];
 
@@ -52,7 +56,7 @@ const qualificationData = [
       {
         location: 'University of Engineering and Technology - Vietnam National University',
         qualification: 'Major: Computer Networks and Data Communications',
-        years: '2020 - Present'
+        years: '2020 - 2024'
       }
     ],
     icon: <GraduationCap size={26} />
@@ -63,7 +67,12 @@ const qualificationData = [
       {
         location: 'Toshiba Software Development (Vietnam) Co. Ltd.',
         qualification: 'Software Engineering (OJT)',
-        years: 'June 2023 - Present'
+        years: 'June 2023 - May 2024'
+      },
+      {
+        location: 'One Mount Group',
+        qualification: 'Backend Software Engineering',
+        years: 'May 2024 - January 2025'
       }
     ],
     icon: <Briefcase size={26} />
@@ -77,15 +86,15 @@ const skillData = [
   },
   {
     title: 'Back-end',
-    data: [NODE, SPRING]
+    data: [NODE, SPRING, GO]
   },
   {
     title: 'Database',
-    data: [POSTGRES]
+    data: [POSTGRES, MYSQL, MONGODB]
   },
   {
     title: 'Others',
-    data: [GIT, DOCKER, AWS, LINUX]
+    data: [GIT, DOCKER, AWS, LINUX, KUBERNETES]
   }
 ];
 export default function AboutSection() {

@@ -3,12 +3,10 @@ import { Button } from '@/components/ui/button';
 import DevImg from '@/components/utils/DevImg';
 import ImgBadge from '@/components/utils/ImgBadge';
 import Socials from '@/components/utils/Socials';
-import CSS from '@/public/css.svg';
 import Dev from '@/public/dev.png';
-import HTML from '@/public/html.svg';
 import JAVA from '@/public/java.svg';
 import JS from '@/public/js.svg';
-import TS from '@/public/ts.svg';
+import GO from '@/public/go.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineProject } from 'react-icons/ai';
@@ -36,16 +34,7 @@ export default function DevSection() {
             <h1 className='h1'>👋 Hello, I&apos;m </h1>
             <div className='h-10 mb-16 xl:mb-20'>
               <TypeAnimation
-                sequence={[
-                  'Hieu',
-                  2000,
-                  'Software Engineering',
-                  2000,
-                  'Web Developer',
-                  2000,
-                  'Cloud/DevOps Engineering in the future :)',
-                  2000
-                ]}
+                sequence={['Hieu', 2000, 'Software Engineering', 2000]}
                 wrapper='span'
                 cursor={true}
                 repeat={Infinity}
@@ -56,10 +45,8 @@ export default function DevSection() {
             <div className='flex flex-row gap-x-2 sm:gap-x-6 lg:gap-x-8 mb-4 mx-auto lg:mx-0 items-center'>
               <h1 className='h4'> Tech stack </h1>
               <span className='w-[2px] h-full bg-primary'></span>
-              <Image src={HTML} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
-              <Image src={CSS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
+              <Image src={GO} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
               <Image src={JS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
-              <Image src={TS} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
               <Image src={JAVA} alt='react' className='w-6 h-6 lg:w-10 lg:h-10' />
             </div>
             <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto lg:mx-0 mt-4 mb-12'>
@@ -83,14 +70,15 @@ export default function DevSection() {
             <ImgBadge
               containerStyles='top-[10%] left-[0%]'
               icon={<IoIosMan />}
-              endCountNum={22}
+              endCountNum={new Date().getFullYear() - 2002}
               badgeText='Years Old'
             />
             <ImgBadge
               containerStyles='top-[65%] right-[-5%]'
               icon={<IoBriefcase />}
-              endCountNum={1}
+              endCountNum={new Date().getFullYear() - 2024}
               badgeText='Years Of Expreience'
+              endCountText='+'
             />
             <ImgBadge
               containerStyles='bottom-[10%] left-[5%]'

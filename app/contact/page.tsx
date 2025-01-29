@@ -26,11 +26,11 @@ export default function ContactPage() {
             <div className='text-sm uppercase font-semibold text-primary tracking-[4px]'>Personal Infomation</div>
             <div className='flex items-center gap-x-8'>
               <Mail size={20} className='text-primary' />
-              <a href='mailto:letrunghieu10x@gmail.com?subject=Me&body=Hello!'>letrunghieu10x@gmail.com</a>
+              <a href='mailto:hieu.lt21.work@gmail.com?subject=Me&body=Hello!'>hieu.lt21.work@gmail.com</a>
             </div>
             <div className='flex items-center gap-x-8'>
               <Home size={20} className='text-primary' />
-              <a href='http://maps.google.com/?q=My Dinh 2, Nam Tu Liem, Ha Noi'>My Dinh 2, Nam Tu Liem, Ha Noi</a>
+              <a href='http://maps.google.com/?q=Ha Noi'>Ha Noi</a>
             </div>
             <div className='flex items-center gap-x-8'>
               <PhoneCall size={20} className='text-primary' />
